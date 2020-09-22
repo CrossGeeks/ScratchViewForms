@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.1141" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.1" />
+    <PackageReference Include="TouchTracking.Forms" Version="1.1.0" />
+    <PackageReference Include="Splat" Version="9.5.35" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="XamarinBack.png" />
+    <None Remove="dotnetbotmaui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="XamarinBack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XamarinFront.png" />
+    <EmbeddedResource Include="MauiBack.png" />
+  </ItemGroup>
+</Project>
